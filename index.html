@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" lang="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Ecom-JS</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/imgs/ecom-logo.png">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+
+
+<body>
+
+
+    <!--****************************************
+        >>>Side bar\/
+    ******************************************-->
+    <nav id="sidebar" class="mt-12 bg-purple-600">
+        <div id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+
+        <div class="sidebar-header ">
+            <h3>Mobile Sidebar</h3>
+        </div>
+
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="index.html" class="">Home</a>
+            </li>
+            <li>
+                <a href="about.html" class="">About</a>
+            </li>
+            <li>
+                <a href="contact.html" class="">Contact</a>
+            </li>
+            <!-- <li>
+                <a href="" class="article">Back to article</a>
+            </li> -->
+        </ul>
+    </nav>
+
+    <header class="fixed mx-auto md:py-3 py-1 w-full bg-purple-800 flex justify-evenly" style="z-index: 99999;">
+        <div class="container mx-auto w-full flex justify-between">
+            <div class="flex w-4/12 md:w-8/12 flex-wrap  items-center">
+                <button type="button" id="sidebarCollapse" class="ml-3 md:hidden text-slate-200">
+                    <i class="fas fa-align-left"></i>
+                    <span></span>
+                </button>
+
+                <button type="button" id="sidebarToggle" class="ml-3 hidden md:block"
+                    style="font-size:30px;cursor:pointer" onclick="openNav()">
+                    <i class="fas fa-align-left text-slate-200"></i>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="flex gap-3 w-8/12 md:w-4/12 items-center justify-end mr-1">
+                <a class="flex items-center  font-semibold text-2xl text-white" href="index.html">
+                    <img id="Collapse1" class="hidden md:block px-3 " src="imgs/ecom-logo.png" alt="" width="80px"
+                        height="">
+                    <img id="Collapse2" class="md:hidden px-2" src="imgs/ecom-logo.png" alt="" width="50px" height="40">
+                </a>
+            </div>
+        </div>
+        <nav class=" flex items-center justify-start">
+            <button id="mobile_icon" class="text-white -ellipsis flex sm:hidden ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+
+            </button>
+            <ul id="main_menu"
+                class="absolute sm:bg-blue-500 bg-purple-400  w-full  left-0 top-10 p-2 text-center hidden sm:block sm:relative sm:top-0  sm:justify-evenly sm:items-center">
+
+
+
+                <li class="mb-2 sm:mb-0 sm:ml-5"><a
+                        class="text-white font-semibold bg-blue-800 px-6 py-3 block rounded pb-4 md:hidden" href="">Sign
+                        in</a></li>
+                <li class="mb-2 sm:mb-0 sm:ml-5"><a
+                        class="text-white font-semibold bg-blue-800 px-6 py-3 block rounded pb-4 md:hidden"
+                        href="">Registration</a></li>
+            </ul>
+
+
+        </nav>
+
+    </header>
+
+
+    <div id="mySidenav" class="sidenav  h-full w-0 fixed z-10 top-0 left-0 bg-purple-900 overflow-x-hidden pt-5  mt-16">
+        <div class="flex flex-col ml-5 mt-6 gap-4">
+            <a href="javascript:void(0)"
+                class="closebtn absolute top-3 right-6 text-3xl ml-0 text-slate-100 hover:text-slate-300"
+                onclick="closeNav()">&times;</a>
+            <a href="#" class=" text-xl text-slate-700  h-10 pt-2 mx-1 pl-2 bg-slate-300 rounded ">Dashboard</a>
+            <a href="index.html"
+                class="text-xl text-slate-200 hover:text-slate-700  hover:bg-slate-300  rounded focus:bg-purple-200 h-10 pt-2 mx-1 pl-2">Home</a>
+            <a href="contact.html"
+                class="text-xl text-slate-200 hover:text-slate-700  hover:bg-slate-300 rounded focus:bg-purple-200 h-10 pt-2 mx-1 pl-2">Contact</a>
+            <a href="about.html"
+                class="text-xl text-slate-200 hover:text-slate-700  hover:bg-slate-300 rounded focus:bg-purple-200 h-10 pt-2 mx-1 pl-2">About</a>
+
+        </div>
+    </div>
+
+    <!--****************************************
+        >>> Page Content\/
+    ******************************************-->
+    <div id="main">
+
+        <div class="flex w-full justify-center pt-14 bg-slate-200 ">
+            <div class="w-full">
+                <div class="content bg-teal-300  mx-4 md:mx-3 flex flex-col justify-center mt-5  px-4 md:px-3">
+                </div>
+                <div class="content  mx-4 md:mx-3 flex flex-col justify-center mt-5 pb-5 px-4 md:px-3">
+                    <img class="w-full h-[180px] rounded-xl border border-teal-500" src="imgs/banner.png" alt="">
+                </div>
+                <div class="content  mx-4 md:mx-3 flex flex-col justify-center mt-5 pb-5 px-4 md:px-3">
+                    <div class="">
+                        <div class="content  mx-4 md:mx-3 flex flex-col justify-center mt-5 pb-5 px-4 md:px-3">
+                            <h1 class="text-xl py-2 font-bold mb-3  border-l-4 border-teal-700 pl-4 bg-slate-300">All
+                                Categories</h1>
+                        </div>
+                        <div class="flex flex-wrap w-full gap-4 ">
+                            <div id="categoryId" class="flex flex-wrap w-full gap-4 justify-center">
+                                <!-- ############################################## -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="content  mx-4 md:mx-3 flex flex-col justify-center my-5 pb-5 px-4 md:px-3">
+
+                    <div class="content  mx-4 md:mx-3 flex flex-col justify-center mt-5 pb-5 px-4 md:px-3">
+                        <!-- <h1 class="text-xl py-2 font-bold mb-3  border-l-4 border-teal-700 pl-4 bg-slate-300">Featured Products</h1>                  -->
+                    </div>
+
+                    <div class="content  mx-4 md:mx-3 flex flex-col justify-center my-5 pb-5 px-4 md:px-3">
+                        <h1 class="text-xl py-2 font-bold mb-3  border-l-4 border-teal-700 pl-4 bg-slate-300">All
+                            Products</h1>
+
+                        <div class="">
+                            <div id="productList" class="flex flex-wrap w-full gap-4 justify-between">
+                                <!--#############################################  -->
+                            </div>
+                        </div>
+
+                        <script>
+
+                        </script>
+
+                        <script>
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--****************************************
+            >>> Footer Content\/
+        ******************************************-->
+
+        <footer class=" bg-purple-800 flex justify-center py-1 px-1 md:px-3">
+            <div class="container mx-2">
+                <div class="flex justify-between w-100 flex-wrap">
+                </div>
+                <div class="mb-1 text-slate-200  text-center">
+                    <h1 class="mb-1">&copy;-2023 SAH</h1>
+                </div>
+        </footer>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "270px";
+                document.getElementById("main").style.marginLeft = "270px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+            openNav()
+
+            // Automatically close the navigation when screen width is less than 500px
+            function checkScreenWidth() {
+                if (window.innerWidth < 767) {
+                    closeNav();
+                } else {
+                    openNav()
+                }
+
+            }
+
+            // Call the function on page load and when the window is resized
+            window.addEventListener("load", checkScreenWidth);
+            window.addEventListener("resize", checkScreenWidth);
+
+        </script>
+    </div>
+
+    <div class="overlay"></div>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>
